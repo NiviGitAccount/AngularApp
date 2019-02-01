@@ -1,0 +1,12 @@
+.bg{background: url(./as.jpg) no-repeat; width:100vw;height: 100vh; }
+.form-container{border: 0px solid blue; padding: 30px 20px; margin-top: 9vh; margin-left: 30vh;
+-webkit-box-shadow: 7px -1px 19px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 7px -1px 19px 0px rgba(0,0,0,0.75);
+box-shadow: 7px -1px 19px 0px rgba(0,0,0,0.75);
+}
+input.ng-invalid{
+border-left: 5px solid red;
+}
+input.ng-valid{
+    border-left: 5px solid green;
+    }

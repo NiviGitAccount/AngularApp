@@ -1,0 +1,67 @@
+<div class="container">
+  <div class="row centered-form">
+    <div class="col-sm-6 col-sm-offset-3">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Please sign up</h3>
+        </div>
+        <div class="panel-body">
+          <form role="form" (ngSubmit)="onSubmit(signUpForm.value)" #signUpForm="ngForm">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  {{emailFromParent}}
+                  <input type="text" name="first_name" id="first_name" ngModel class="form-control input-sm"
+                    placeholder="First Name">
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <input type="text" name="last_name" id="last_name" ngModel class="form-control input-sm" placeholder="Last Name">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <input type="email" #ccomponent (keyup) = "onChange(ccomponent.value)" name="email" id="email" class="form-control input-sm" #email
+                  [class.is-invalid]="isDuplicate" placeholder="Email Address" ngModel>
+                  <div class="invalid-feedback" [hidden]="!isDuplicate">
+                      User with same Email already exist!.
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-6 col-sm-6 col-md-6">
+                <div class="form-group">
+                  <input type="number" name="phone" id="phone" class="form-control input-sm" ngModel placeholder="Phone number">
+                </div>
+              </div>
+
+            </div>
+
+
+            <div class="row">
+              <div class="col-xs-6 col-sm-6 col-md-6">
+                <div class="form-group">
+                  <input type="password" name="password" id="password" ngModel class="form-control input-sm"
+                    placeholder="Password">
+                </div>
+              </div>
+              <div class="col-xs-6 col-sm-6 col-md-6">
+                <div class="form-group">
+                  <input type="password" name="password_confirmation" ngModel id="password_confirmation" class="form-control input-sm"
+                    placeholder="Confirm Password">
+                </div>
+              </div>
+            </div>
+
+            <input type="submit" value="Sign Up" class="btn btn-info btn-block">
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
